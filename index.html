@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="stylesheet" href="assets/style/all.min.css" />
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <div class="loader" id="loader">
+      <img src="/assets/img/Double Ring-1s-200px.gif" alt="" />
+    </div>
+    <div class="home" id="home">
+      <nav>
+        <ul>
+          <a id="convert-btn"
+            ><li><i class="fa fa-coins"></i> Convert</li></a
+          >
+          <li>
+            <a id="rates-btn"><i class="fa fa-percentage"></i> Rates</a>
+          </li>
+          <li>
+            <a id="history-btn"><i class="fa fa-history"></i> History</a>
+          </li>
+        </ul>
+      </nav>
+      <img
+        src="/assets/img/shape-1.png"
+        alt=""
+        width="300px"
+        class="top-shape"
+      />
+      <div class="container">
+        <div id="hero-page">
+          <div class="landing landing-style" id="landing">
+            <img src="/assets/img/landing-img.png" alt="" width="550px" />
+            <h1>Exchange Bureau</h1>
+            <p>
+              <em
+                >Convert currencies with daily updated rates. Monitor the
+                exchange
+                <br />
+                rate on hourly change. Save your converted rates. <br />
+                Speed, Reliability and Ease of Access.</em
+              >
+            </p>
+          </div>
+          <div class="right hide" id="right">
+            <div class="card">
+              <div class="calc-loader" id="calc-loader">
+                <img src="/assets/img/calc-loader.gif" alt="" width="50px">
+              </div>
+              <div class="converter">
+                <div class="currency-rates">
+                  <h2>Rates</h2>
+                  <p>View current currency rates</p>
+                  <br /><br />
+                  <select name="rate" id="currency-rate" class="currency-rate">
+                    <option value="AUD">AUD</option>
+                    <option value="CAD">CAD</option>
+                    <option value="CNH">CNH</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                    <option value="NGN">NGN</option>
+                    <option value="USD">USD</option>
+                  </select>
+                  <div class="ratings">
+                    <div class="cur">
+                      <h3>AUD: </h3>
+                      <h3>CAD: </h3>
+                      <h3>CNH: </h3>
+                      <h3>EUR: </h3>
+                      <h3>GBP: </h3>
+                      <h3>JPY: </h3>
+                      <h3>NGN: </h3>
+                      <h3>USD: </h3>
+                    </div>
+                    <div class="amount">
+                      <h3 id="aud"></h3>
+                      <h3 id="cad"></h3>
+                      <h3 id="cnh"></h3>
+                      <h3 id="eur"></h3>
+                      <h3 id="gbp"></h3>
+                      <h3 id="jpy"></h3>
+                      <h3 id="ngn"></h3>
+                      <h3 id="usd"></h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="convert-card hide">
+                  <h2>Convert</h2>
+                  <p>Choose currency and enter amount</p>
+                  <select name="base" id="base-currency" class="base-currency">
+                    <option value="AUD">AUD</option>
+                    <option value="CAD">CAD</option>
+                    <option value="CNH">CNH</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                    <option value="NGN">NGN</option>
+                    <option value="USD">USD</option>
+                  </select>
+                  <input
+                    type="number"
+                    id="convert-from"
+                    placeholder="Enter digits"
+                  />
+                  <br />
+                  <small class="from">Convert from</small><br />
+                  <i class="fas fa-exchange-alt exchange"></i><br />
+                  <select
+                    name="symbols"
+                    id="symbol-currency"
+                    class="symbol-currency"
+                  >
+                    <option value="AUD">AUD</option>
+                    <option value="CAD">CAD</option>
+                    <option value="CNH">CNH</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                    <option value="NGN">NGN</option>
+                    <option value="USD">USD</option>
+                  </select>
+                  <input
+                    type="text"
+                    id="convert-to"
+                    disabled
+                    placeholder="Result" style="color: white;"
+                  /><br />
+                  <small class="to">Convert to</small><br />
+                  <br />
+                  <small class="rate"
+                    >Rate: <span class="cur-rate"></span
+                  ></small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="/assets/img/shape-2.png"
+          alt=""
+          width="200px"
+          class="bottom-shape"
+        />
+        <img
+          src="/assets/img/shape-3.png"
+          alt=""
+          width="500px"
+          class="right-shape"
+        />
+      </div>
+    </div>
+
+    <script src="/assets/script/script.js"></script>
+  </body>
+</html>
