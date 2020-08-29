@@ -500,4 +500,16 @@ ul {
   #convert-to {
     font-size: 1rem;
   }
+  .landing img {
+    width: 300px;
+    margin: auto;
+    padding-top: 150px;
+    /* margin-top: 150px; */
+  }
+  .bottom-shape {
+    display: none;
+  }
+  .right-shape {
+    display: none;
+  }
 }
