@@ -82,6 +82,14 @@ li {
   animation-timing-function: ease-in-out;
 }
 
+div.logo {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 20px;
+  display: grid;
+  align-items: center;
+}
+
 .landing {
   /* margin-top: 100px; */
   animation-name: slide-left;
@@ -125,7 +133,7 @@ nav {
   margin-bottom: 40px;
   z-index: 20;
   right: 0;
-  margin-right: 150px;
+  /* margin-right: 150px; */
 }
 
 .currency-rates {
@@ -151,7 +159,7 @@ nav {
   display: flex;
   padding: 20px;
   justify-content: center;
-  color: rgb(158, 158, 158);
+  color: white;
 }
 
 .cur {
@@ -256,6 +264,11 @@ option {
   color: white;
 }
 
+.symbol-currency:focus {
+  background: grey;
+  /* color: black; */
+}
+
 #conver-to {
   /* color: white; */
 }
@@ -278,6 +291,14 @@ small.rate {
 .convert-card {
   /* position: absolute;
   left: 0; */
+}
+
+div#placeholder {
+  color: white;
+}
+
+#convert-to::-webkit-input-placeholder {
+  color: white;
 }
 
 .exchange {
@@ -443,6 +464,15 @@ ul {
   nav {
     margin-right: 0;
   }
+  #convert-to {
+    color: rgb(109, 109, 109);
+  }
+  #convert-to::-webkit-input-placeholder {
+    color: rgb(109, 109, 109);
+  }
+  .ratings {
+    color: rgb(94, 94, 94);
+  }
 }
 
 @media (max-width: 550px) {
@@ -472,6 +502,20 @@ ul {
   }
   nav {
     margin-right: 0;
+    right: 0;
+    left: 0;
+  }
+  ul {
+    justify-items: center;
+    width: 300px;
+    margin-top: 50px;
+  }
+  .logo {
+    display: grid;
+    justify-items: center;
+    position: relative;
+    left: 0;
+    right: 0;
   }
   small.rate {
     color: rgb(158, 158, 158);
@@ -479,6 +523,7 @@ ul {
   .card {
     width: 300px;
     height: 400px;
+    margin-top: 50px;
   }
   .calc-loader {
     width: 300px;

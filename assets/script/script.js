@@ -51,31 +51,32 @@ function displayHero() {
   rightPage.classList.remove("hide");
 }
 
-window.addEventListener('resize', () => {
-  // console.log(window.innerWidth)
-  if(convertBtn.classList.contains('active') || ratesBtn.classList.contains('active')) {
-    responsive()
-    // landingPage.classList.add('hide')
-  } 
-  if(window.innerWidth > 1100) {
-    landingPage.classList.remove('hide')
+window.addEventListener("resize", () => {
+  if (
+    convertBtn.classList.contains("active") ||
+    ratesBtn.classList.contains("active")
+  ) {
+    responsive();
   }
-})
+  if (window.innerWidth > 1100) {
+    landingPage.classList.remove("hide");
+  }
+});
 
 function responsive() {
-  if(window.innerWidth <= 500 || window.innerWidth <= 800 || window.innerWidth <= 1100) {
-    landingPage.classList.add('hide')
-    // landingPage.classList.add('fade-out')
-    // convertCard.style.margin = 'auto'
-  } else if(window.innerWidth >= 1300){
-    landingPage.classList.remove('hide')
+  if (
+    window.innerWidth <= 500 ||
+    window.innerWidth <= 800 ||
+    window.innerWidth <= 1100
+  ) {
+    landingPage.classList.add("hide");
+  } else if (window.innerWidth >= 1300) {
+    landingPage.classList.remove("hide");
   }
 }
 
-// responsive()
-
 function viewConvertCard() {
-  if(convertBtn.classList.contains('active')) {
+  if (convertBtn.classList.contains("active")) {
     calcLoader.classList.add("hide");
   } else {
     calcLoader.classList.remove("hide");
@@ -85,14 +86,13 @@ function viewConvertCard() {
   ratesBtn.classList.remove("active");
   historyBtn.classList.remove("active");
   convertCard.classList.add("animate");
-  
-  convertCard.classList.add('hide')
+
+  convertCard.classList.add("hide");
   setTimeout(removeCalcLoader, 2000);
-  // convertCard.style.opacity = 1;
   convertCard.classList.remove("hide");
   rateCard.classList.add("hide");
   displayHero();
-  responsive()
+  responsive();
 }
 
 async function viewRatesCard() {
@@ -105,6 +105,14 @@ async function viewRatesCard() {
   ratesBtn.classList.add("active");
   convertBtn.classList.remove("active");
   rateCard.classList.add("animate");
+
+  if (ratesBtn.classList.contains("active")) {
+    calcLoader.classList.remove("hide");
+  } else {
+    calcLoader.classList.add("hide");
+  }
+
+  setTimeout(removeCalcLoader, 2000);
 
   const curRates = data.rates;
 
